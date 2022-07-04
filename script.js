@@ -31,6 +31,9 @@ const buttonStyle = {
   fontSize(value) {
     this.element.style.fontSize = value + "rem";
   },
+  boxShadow(value) {
+    this.element.style.boxShadow = value;
+  },
 };
 
 function formTarget(event) {
@@ -43,7 +46,6 @@ function formTarget(event) {
 function cssTextHtml() {
   cssText.innerHTML =
     "<span>" + button.style.cssText.split("; ").join(";</span><span>");
-  console.log(cssText);
 }
 
 form.addEventListener("change", formTarget);
